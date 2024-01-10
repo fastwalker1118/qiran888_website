@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Go Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div onclick = "stb()" id="timer1">
+        <div id = "time_white" class = "time"> 
+            10:00
+        </div>
+        <div id = "dumiao_w" > 
+            +3x20s
+        </div>
+    </div>
+    <div id = "buttons" style="margin-bottom: -10px; height: 50px;">
+        <button onclick = "start()" id = 'start' class = "timerbut"> Start </button>
+        <button onclick = "pause()" id = "pause" class = "timerbut"> Pause </button>
+        <button onclick = "reset()" id = "reset" class = "timerbut"> Reset </button>
+    </div>
+    <div onclick = "stw()" id="timer2" class="time">
+        <div id = "time_black">
+            10:00
+        </div>
+        <div id = "dumiao_b" > 
+            +3x20s
+        </div>
+    </div>
+    <script src="script.js"> </script>
+</body>
+</html>

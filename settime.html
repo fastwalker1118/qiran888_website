@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid Layout</title>
+  <link rel="stylesheet" href="settime_style.css">
+</head>
+<body>
+   <div class="bg-image"></div>
+  <div class="grid-container">
+
+    <div class="grid-item big-font">Regular time</div>
+
+    <div class="grid-item">
+      <input type="text" placeholder="Hours" class = "box" id = "id" required>
+    </div>
+    <div class="grid-item">
+      <input type="text" placeholder="Minutes" class = "box" required>
+    </div> 
+    <div class="grid-item big-font">Byo-Yomi</div>
+    <div class="grid-item">
+      <input type="text" placeholder="-X" class = "box" required>
+    </div>
+    <div class="grid-item">
+      <input type="text" placeholder="Seconds" class = "box" required>
+    </div>
+
+    <a href="main.html" id="nextLink" onclick="captureUserInput()">
+        <img src="next.png" alt="Next" class="next-image">
+    </a>  
+  </div>
+  <script>
+    function captureUserInput() {
+        let starthour = document.querySelector('input[placeholder="Hours"]').value;
+        let startmin = document.querySelector('input[placeholder="Minutes"]').value;
+        let dumiao_times_b = document.querySelector('input[placeholder="-X"]').value;
+        let dumiao = document.querySelector('input[placeholder="Seconds"]').value;
+
+        localStorage.setItem('starthour', starthour);
+        localStorage.setItem('startmin', startmin);
+        localStorage.setItem('dumiao_times_b', dumiao_times_b);
+        localStorage.setItem('dumiao', dumiao);
+    }
+  </script> 
+</body>
+</html>
